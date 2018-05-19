@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450D020520B0E4630025C2A2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D020420B0E4630025C2A2 /* MapViewController.swift */; };
+		4538AB6020B09C0A00961E34 /* MeasurePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538AB5F20B09C0A00961E34 /* MeasurePoint.swift */; };
+		4538AB6220B09FE900961E34 /* QueryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538AB6120B09FE900961E34 /* QueryServices.swift */; };
+		4538AB6720B0A88900961E34 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538AB6620B0A88900961E34 /* AppData.swift */; };
 		455038A220B099DB006CE5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455038A120B099DB006CE5EB /* AppDelegate.swift */; };
 		455038A420B099DB006CE5EB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455038A320B099DB006CE5EB /* FirstViewController.swift */; };
 		455038A620B099DB006CE5EB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455038A520B099DB006CE5EB /* SecondViewController.swift */; };
 		455038A920B099DB006CE5EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455038A720B099DB006CE5EB /* Main.storyboard */; };
 		455038AB20B099DC006CE5EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455038AA20B099DC006CE5EB /* Assets.xcassets */; };
 		455038AE20B099DC006CE5EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455038AC20B099DC006CE5EB /* LaunchScreen.storyboard */; };
+		455038B720B099F5006CE5EB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455038B620B099F5006CE5EB /* MapKit.framework */; };
+		C00C781DE5005DB365F5EBF0 /* Pods_MeasurePoints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758F1B8B0F74B99CE932DED1 /* Pods_MeasurePoints.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21DB0E213EB2116F34D26280 /* Pods-MeasurePoints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasurePoints.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeasurePoints/Pods-MeasurePoints.release.xcconfig"; sourceTree = "<group>"; };
+		34E1FCEC380C4EAB2F579894 /* Pods-MeasurePoints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasurePoints.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeasurePoints/Pods-MeasurePoints.debug.xcconfig"; sourceTree = "<group>"; };
+		450D020420B0E4630025C2A2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4538AB5F20B09C0A00961E34 /* MeasurePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurePoint.swift; sourceTree = "<group>"; };
+		4538AB6120B09FE900961E34 /* QueryServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryServices.swift; sourceTree = "<group>"; };
+		4538AB6620B0A88900961E34 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		4550389E20B099DB006CE5EB /* MeasurePoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeasurePoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		455038A120B099DB006CE5EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		455038A320B099DB006CE5EB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +36,8 @@
 		455038AA20B099DC006CE5EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		455038AD20B099DC006CE5EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		455038AF20B099DC006CE5EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		455038B620B099F5006CE5EB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		758F1B8B0F74B99CE932DED1 /* Pods_MeasurePoints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeasurePoints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455038B720B099F5006CE5EB /* MapKit.framework in Frameworks */,
+				C00C781DE5005DB365F5EBF0 /* Pods_MeasurePoints.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3651278AE9E520C3C77C8315 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34E1FCEC380C4EAB2F579894 /* Pods-MeasurePoints.debug.xcconfig */,
+				21DB0E213EB2116F34D26280 /* Pods-MeasurePoints.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4538AB5E20B09BF700961E34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4538AB5F20B09C0A00961E34 /* MeasurePoint.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4538AB6320B09FF100961E34 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				4538AB6120B09FE900961E34 /* QueryServices.swift */,
+				4538AB6620B0A88900961E34 /* AppData.swift */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
 		4550389520B099DB006CE5EB = {
 			isa = PBXGroup;
 			children = (
 				455038A020B099DB006CE5EB /* MeasurePoints */,
 				4550389F20B099DB006CE5EB /* Products */,
+				455038B520B099F5006CE5EB /* Frameworks */,
+				3651278AE9E520C3C77C8315 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +100,43 @@
 		455038A020B099DB006CE5EB /* MeasurePoints */ = {
 			isa = PBXGroup;
 			children = (
+				4538AB6320B09FF100961E34 /* DataAccess */,
+				4538AB5E20B09BF700961E34 /* Models */,
 				455038A120B099DB006CE5EB /* AppDelegate.swift */,
-				455038A320B099DB006CE5EB /* FirstViewController.swift */,
-				455038A520B099DB006CE5EB /* SecondViewController.swift */,
-				455038A720B099DB006CE5EB /* Main.storyboard */,
+				455038B820B09A1A006CE5EB /* ViewModels */,
+				455038B920B09A25006CE5EB /* Storyboards */,
 				455038AA20B099DC006CE5EB /* Assets.xcassets */,
-				455038AC20B099DC006CE5EB /* LaunchScreen.storyboard */,
 				455038AF20B099DC006CE5EB /* Info.plist */,
 			);
 			path = MeasurePoints;
+			sourceTree = "<group>";
+		};
+		455038B520B099F5006CE5EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				455038B620B099F5006CE5EB /* MapKit.framework */,
+				758F1B8B0F74B99CE932DED1 /* Pods_MeasurePoints.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		455038B820B09A1A006CE5EB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				455038A320B099DB006CE5EB /* FirstViewController.swift */,
+				455038A520B099DB006CE5EB /* SecondViewController.swift */,
+				450D020420B0E4630025C2A2 /* MapViewController.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		455038B920B09A25006CE5EB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				455038A720B099DB006CE5EB /* Main.storyboard */,
+				455038AC20B099DC006CE5EB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 455038B220B099DC006CE5EB /* Build configuration list for PBXNativeTarget "MeasurePoints" */;
 			buildPhases = (
+				A91042FF8E32B19CF9AE5784 /* [CP] Check Pods Manifest.lock */,
 				4550389A20B099DB006CE5EB /* Sources */,
 				4550389B20B099DB006CE5EB /* Frameworks */,
 				4550389C20B099DB006CE5EB /* Resources */,
+				C44062716DE1A5F81EF1B4F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +173,11 @@
 				TargetAttributes = {
 					4550389D20B099DB006CE5EB = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -133,14 +212,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A91042FF8E32B19CF9AE5784 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeasurePoints-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C44062716DE1A5F81EF1B4F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MeasurePoints/Pods-MeasurePoints-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeasurePoints/Pods-MeasurePoints-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4550389A20B099DB006CE5EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				455038A620B099DB006CE5EB /* SecondViewController.swift in Sources */,
+				4538AB6020B09C0A00961E34 /* MeasurePoint.swift in Sources */,
+				4538AB6220B09FE900961E34 /* QueryServices.swift in Sources */,
 				455038A220B099DB006CE5EB /* AppDelegate.swift in Sources */,
 				455038A420B099DB006CE5EB /* FirstViewController.swift in Sources */,
+				4538AB6720B0A88900961E34 /* AppData.swift in Sources */,
+				450D020520B0E4630025C2A2 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -271,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -282,6 +404,7 @@
 		};
 		455038B320B099DC006CE5EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34E1FCEC380C4EAB2F579894 /* Pods-MeasurePoints.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +423,7 @@
 		};
 		455038B420B099DC006CE5EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21DB0E213EB2116F34D26280 /* Pods-MeasurePoints.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
