@@ -1,16 +1,31 @@
 PODS:
   - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
+  - MBProgressHUD (1.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - AlamofireImage (~> 3.3)
+  - Charts
+  - MBProgressHUD (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireImage
+    - Charts
+    - MBProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
 
-PODFILE CHECKSUM: 1d34c1d386e98746dac44772d1b0d20e1fa22615
+PODFILE CHECKSUM: a99e9de59773ea398046a5ecd9d3d33e78e816fd
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

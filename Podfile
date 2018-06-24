@@ -7,5 +7,8 @@ target 'MeasurePoints' do
 
   # Pods for MeasurePoints
   pod 'Alamofire', '~> 4.7'
+  pod 'Charts'
+  pod 'MBProgressHUD', '~> 1.0'
+  pod 'AlamofireImage', '~> 3.3'
 
 end

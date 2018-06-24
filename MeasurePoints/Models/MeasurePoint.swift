@@ -15,14 +15,14 @@ struct MeasurePoint: Codable {
     var StationName: String = ""
     var Latitude: String = ""
     var Longitude: String = ""
+    var InventoryDate: String = ""
+    var WellDepth: String = ""
     
-    var lastDate: Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-        
-        return dateFormatter.date(from:LastDateReported)!
-    }
+    var imageURL: String? = "https://waterdata.usgs.gov/nwisweb/local/state/pr/text/pics/"
+    
+    var detailData: RootObject?
+    
+    var isFavorite: Bool? = false
     
     private enum CodingKeys: String, CodingKey {
         case SiteNumber = "site_no"
@@ -31,7 +31,8 @@ struct MeasurePoint: Codable {
         case StationName = "station_nm"
         case Latitude = "dec_lat_va"
         case Longitude = "dec_long_va"
-        
+        case InventoryDate = "inventory_dt"
+        case WellDepth = "well_depth_va"
     }
     
     
