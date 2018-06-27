@@ -183,7 +183,8 @@ class DetailViewController: UIViewController {
       MBProgressHUD.showAdded(to: self.view, animated: true);
         queryService.fetchDetailData(site: detailMeasurePoint.SiteNumber) { [weak self] (success, error) in
           self?.prepareChart()
-            MBProgressHUD.hide(for: (self?.view)!, animated: true)
+            guard let view = self?.view else { return }
+            MBProgressHUD.hide(for: (view), animated: true)
         }
       
     }
