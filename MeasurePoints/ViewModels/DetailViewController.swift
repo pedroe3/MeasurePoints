@@ -6,20 +6,46 @@
 //  Copyright © 2018 sadcrow. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Charts
 import MBProgressHUD
 import AlamofireImage
 
-class DetailViewController: UIViewController{
+class DetailViewController: UIViewController {
     
-    @IBOutlet weak var siteNameLabel: UILabel!
-    @IBOutlet weak var stationNameLabel: UILabel!
-    @IBOutlet weak var reportingAgencyLabel: UILabel!
-    @IBOutlet weak var lastDateLabel: UILabel!
+    @IBOutlet weak var siteNameLabel: UILabel! {
+        didSet {
+            siteNameLabel.textColor = UIColor.bondi
+        }
+    }
+    @IBOutlet weak var stationNameLabel: UILabel!{
+        didSet {
+            stationNameLabel.textColor = UIColor.marina
+        }
+    }
+    @IBOutlet weak var reportingAgencyLabel: UILabel!{
+        didSet {
+            reportingAgencyLabel.textColor = UIColor.marina
+        }
+    }
+    @IBOutlet weak var lastDateLabel: UILabel!{
+        didSet {
+            lastDateLabel.textColor = UIColor.marina
+        }
+    }
+    
+    
     
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var imageViewDetail: UIImageView!
+    
+    @IBOutlet weak var favButton: UIButton! {
+        didSet {
+           favButton.apply(ButtonStyle.standard, with: "Add")
+        }
+    }
+    
     
     let file = FileAccess()
     let appData = AppData.shared
@@ -29,20 +55,21 @@ class DetailViewController: UIViewController{
  
     override func viewDidLoad(){
         super.viewDidLoad()
-        configureBackBarButton()
+        configureColor()
+        //configureBackBarButton()
         setupBasicInfo()
         loadDataFromApi()
         setImage()
         prepareChart()
-        setNavigationBar(detailMeasurePoint.isFavorite!)
-        MBProgressHUD.hide(for: self.view, animated: true)
+        setFavoriteButton(detailMeasurePoint.isFavorite!)
     }
     
     
     func prepareChart() {
-        
         let dataSets = dataSetEntry()
+        
         lineChartView.data = LineChartData(dataSet: dataSets)
+        
     }
     
     private func dataSetEntry() -> LineChartDataSet {
@@ -58,35 +85,72 @@ class DetailViewController: UIViewController{
                 return ChartDataEntry(x: Double(i), y: Double(val))
             }
             let set = LineChartDataSet(values: values, label: "Measure Readings")
+            set.circleColors = [UIColor.bondi]
+            set.setColor(UIColor.marina)
+             set.circleRadius = 3
             return set
         } else {
            return returnEmptyDataSet()
         }
     }
-    
-    
+
     func returnEmptyDataSet() -> LineChartDataSet {
         let values = (0..<10).map { (i) -> ChartDataEntry in
             let val = 0.0
             return ChartDataEntry(x: Double(i), y: Double(val))
         }
         let set = LineChartDataSet(values: values, label: "No Data Available")
+        set.circleColors = [UIColor.marina]
+        set.setColor(UIColor.marina)
+        set.circleRadius = 1
         return set
     }
 
     private func setupBasicInfo(){
         siteNameLabel.text = detailMeasurePoint.SiteNumber
-        siteNameLabel.textColor = .blue
         stationNameLabel.text = detailMeasurePoint.StationName
-        reportingAgencyLabel.text = detailMeasurePoint.ReportingAgency
-        lastDateLabel.text = detailMeasurePoint.LastDateReported
+        reportingAgencyLabel.text = "Reporting Agency: \(detailMeasurePoint.ReportingAgency)"
+        
+        
+        //let dateFormatter = DateFormatter()
+        //dateFormatter.locale = Locale(identifier: "en_US")
+        //dateFormatter.setLocalizedDateFormatFromTemplate("MMMMd")
+        //dateFormatter.dateFormat = "'yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ'"
+        //let date = dateFormatter.date(from: detailMeasurePoint.LastDateReported)
+       
+        lastDateLabel.text = ""
+    }
+    
+    private func setFavoriteButton(_ isFavorite: Bool) {
+        if(detailMeasurePoint.isFavorite!){
+            favButton.apply(ButtonStyle.standard, with: "Favorite")
+           // navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "favorites_icon_29pt"), style: .plain, target: self, action: #selector(favoriteButtonPressed))
+        } else {
+            favButton.apply(ButtonStyle.standard, with: "Add")
+           // navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(favoriteButtonPressed))
+        }
     }
     
     private func setNavigationBar(_ isFavorite: Bool){
         if(detailMeasurePoint.isFavorite!){
           navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "favorites_icon_29pt"), style: .plain, target: self, action: #selector(favoriteButtonPressed))
         } else {
-          navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(favoriteButtonPressed))
+          navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(favoriteButtonPressed))
+        }
+    }
+    
+    
+    @IBAction func favButtonPressed(_ sender: Any) {
+         if(detailMeasurePoint.isFavorite == false) {
+             detailMeasurePoint.isFavorite = true
+            favButton.apply(ButtonStyle.standard, with: "Favorite")
+            appData.updateFavoriteList(with: detailMeasurePoint)
+            self.file.saveToFavoritesFile()
+             } else {
+            detailMeasurePoint.isFavorite = false
+            appData.updateFavoriteList(with: detailMeasurePoint)
+            self.file.saveToFavoritesFile()
+            favButton.apply(ButtonStyle.standard, with: "Add")
         }
     }
     
@@ -105,11 +169,13 @@ class DetailViewController: UIViewController{
     }
     
     private func setImage() {
-        if let imageURL = URL(string: detailMeasurePoint.imageURL! + detailMeasurePoint.SiteNumber + ".jpg"  ?? ""){
+        if let imageURL = URL(string: detailMeasurePoint.imageURL! + detailMeasurePoint.SiteNumber + ".jpg"){
             imageViewDetail.af_setImage(withURL: imageURL, completion: {( _ ) in
             })
         } else {
-            imageViewDetail.image = nil
+            print("problem downloading image")
+            imageViewDetail.image = UIImage(named: "NoImageAvailable.jpeg")
+            
         }
     }
     
@@ -117,8 +183,9 @@ class DetailViewController: UIViewController{
       MBProgressHUD.showAdded(to: self.view, animated: true);
         queryService.fetchDetailData(site: detailMeasurePoint.SiteNumber) { [weak self] (success, error) in
           self?.prepareChart()
-           
+            MBProgressHUD.hide(for: (self?.view)!, animated: true)
         }
+      
     }
 }
 

@@ -20,7 +20,11 @@ class FavoritesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
+        self.tableView.backgroundColor = UIColor.glass
+        configureColor()
         configureBackBarButton()
+        title = "Favorites"
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +52,8 @@ extension FavoritesViewController {
             let measurePoint = measurePointList[indexPath.row]
             cell.configureCell(with: measurePoint)
             cell.configureMap(with: measurePoint)
+            cell.contentView.backgroundColor = UIColor.glass
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteEmptyCell", for: indexPath) as! MeasurePointFavoriteEmptyCell

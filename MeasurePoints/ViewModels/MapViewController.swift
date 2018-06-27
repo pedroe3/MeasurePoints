@@ -20,6 +20,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         title = "Map"
         setupInitialMap()
+        configureColor()
     }
 }
 

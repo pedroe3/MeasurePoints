@@ -1,48 +1,47 @@
 //
-//  MeasurePointTableViewCell.swift
+//  CardTableViewCell.swift
 //  MeasurePoints
 //
-//  Created by Pedro Rivera on 5/19/18.
-//  Copyright © 2018 sadcrow. All rights reserved.
+//  Created by Pedro Rivera on 6/26/18.
+//  Copyright © 2018 madcrow. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import MapKit
 
-class MeasurePointTableViewCell: UITableViewCell  {
-
+class CardTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
+    @IBOutlet weak var inventoryLabel: UILabel! {
+        didSet {
+            inventoryLabel.textColor = UIColor.marina
+        }
+    }
+    @IBOutlet weak var caseNumberLabel: UILabel! {
+        didSet {
+            caseNumberLabel.textColor = UIColor.marina
+        }
+    }
     @IBOutlet weak var nameLabel: UILabel! {
         didSet {
             nameLabel.textColor = UIColor.bondi
         }
     }
     
-    @IBOutlet weak var caseNumberLabel: UILabel! {
+    @IBOutlet weak var favoriteButton: UIButton! {
         didSet {
-            caseNumberLabel.textColor = UIColor.marina
+            //favoriteButton.apply(ButtonStyle.standard, with: "Add to Favorites")
         }
     }
     
-    @IBOutlet weak var inventoryDate: UILabel! {
-        didSet {
-            inventoryDate.textColor = UIColor.marina
-        }
-    }
-    
-    @IBOutlet weak var mapInCell: MKMapView!
-    
-    
-    @IBOutlet weak var favoriteImage: UIImageView!
     
     func configureCell(with measurePoint: MeasurePoint) {
-        
         self.nameLabel?.text = "Site Number: " + measurePoint.SiteNumber
         self.caseNumberLabel.text = "Inventory: \(measurePoint.InventoryDate)"
-        self.inventoryDate.text = measurePoint.StationName
+        self.inventoryLabel.text = measurePoint.StationName
         self.contentView.backgroundColor = UIColor.glass
-        //let disclousure = UITableViewCellAccessoryType.disclosureIndicator
-        //self.accessoryType = disclousure
-        
     }
     
     func configureMap(with measurePoint: MeasurePoint) {
@@ -50,24 +49,22 @@ class MeasurePointTableViewCell: UITableViewCell  {
         let initialLocation = CLLocation(latitude: Double(measurePoint.Latitude)!, longitude: Double(measurePoint.Longitude)!)
         let regionRadius: CLLocationDistance = 10000
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(initialLocation.coordinate, regionRadius, regionRadius)
-        self.mapInCell.setRegion(coordinateRegion, animated: false)
+        self.mapView.setRegion(coordinateRegion, animated: false)
         let point = MeasurePointClass(title: measurePoint.SiteNumber,
                                       locationName: measurePoint.StationName,
                                       discipline: "Measure Point",
                                       coordinate: CLLocationCoordinate2D(latitude: Double(measurePoint.Latitude)!, longitude: Double(measurePoint.Longitude)!))
         
-        self.mapInCell.addAnnotation(point)
+        self.mapView.addAnnotation(point)
     }
     
     func setFavoriteImage(_ measurePoint: MeasurePoint){
         if(measurePoint.isFavorite!){
-            favoriteImage.image = #imageLiteral(resourceName: "favorites_icon_40pt")
+            //favoriteButton.apply(ButtonStyle.standard, with: "Favorite")
+             //favoriteImage.image = #imageLiteral(resourceName: "favorites_icon_40pt")
         } else {
-            favoriteImage.image = nil
+           // favoriteButton.apply(ButtonStyle.standard, with: "Add")
+            // favoriteImage.image = nil
         }
     }
-    
-    
 }
-
-

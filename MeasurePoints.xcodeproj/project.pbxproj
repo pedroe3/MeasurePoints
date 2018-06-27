@@ -10,11 +10,16 @@
 		450D020520B0E4630025C2A2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D020420B0E4630025C2A2 /* MapViewController.swift */; };
 		450D020720B0EBBB0025C2A2 /* MeasurePointsDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D020620B0EBBB0025C2A2 /* MeasurePointsDataTableViewController.swift */; };
 		450D020920B0F1C80025C2A2 /* MeasurePointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D020820B0F1C80025C2A2 /* MeasurePointTableViewCell.swift */; };
+		451615BE20E1B89600E7DC36 /* DesignTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451615BD20E1B89600E7DC36 /* DesignTableViewCell.swift */; };
 		45198DB420D5957600D4D3C9 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45198DB320D5957600D4D3C9 /* FavoritesViewController.swift */; };
 		4535045720B9F678003BFF6F /* MeasurePointClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535045620B9F678003BFF6F /* MeasurePointClass.swift */; };
 		4538AB6020B09C0A00961E34 /* MeasurePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538AB5F20B09C0A00961E34 /* MeasurePoint.swift */; };
 		4538AB6220B09FE900961E34 /* QueryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538AB6120B09FE900961E34 /* QueryServices.swift */; };
 		4538AB6720B0A88900961E34 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538AB6620B0A88900961E34 /* AppData.swift */; };
+		4546D1E020E30A7F001C83CA /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4546D1DF20E30A7F001C83CA /* CardTableViewCell.swift */; };
+		4546D1E320E30B73001C83CA /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4546D1E220E30B73001C83CA /* ButtonStyle.swift */; };
+		4546D1E520E30F47001C83CA /* CardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4546D1E420E30F47001C83CA /* CardTableView.swift */; };
+		4546D1E720E31E03001C83CA /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4546D1E620E31E03001C83CA /* ColorExtension.swift */; };
 		455038A220B099DB006CE5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455038A120B099DB006CE5EB /* AppDelegate.swift */; };
 		455038A920B099DB006CE5EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455038A720B099DB006CE5EB /* Main.storyboard */; };
 		455038AB20B099DC006CE5EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455038AA20B099DC006CE5EB /* Assets.xcassets */; };
@@ -35,11 +40,16 @@
 		450D020420B0E4630025C2A2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		450D020620B0EBBB0025C2A2 /* MeasurePointsDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurePointsDataTableViewController.swift; sourceTree = "<group>"; };
 		450D020820B0F1C80025C2A2 /* MeasurePointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurePointTableViewCell.swift; sourceTree = "<group>"; };
+		451615BD20E1B89600E7DC36 /* DesignTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTableViewCell.swift; sourceTree = "<group>"; };
 		45198DB320D5957600D4D3C9 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		4535045620B9F678003BFF6F /* MeasurePointClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurePointClass.swift; sourceTree = "<group>"; };
 		4538AB5F20B09C0A00961E34 /* MeasurePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurePoint.swift; sourceTree = "<group>"; };
 		4538AB6120B09FE900961E34 /* QueryServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryServices.swift; sourceTree = "<group>"; };
 		4538AB6620B0A88900961E34 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		4546D1DF20E30A7F001C83CA /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		4546D1E220E30B73001C83CA /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		4546D1E420E30F47001C83CA /* CardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableView.swift; sourceTree = "<group>"; };
+		4546D1E620E31E03001C83CA /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		4550389E20B099DB006CE5EB /* MeasurePoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeasurePoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		455038A120B099DB006CE5EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		455038A820B099DB006CE5EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +109,14 @@
 			path = DataAccess;
 			sourceTree = "<group>";
 		};
+		4546D1E120E30B5C001C83CA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				4546D1E220E30B73001C83CA /* ButtonStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		4550389520B099DB006CE5EB = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +138,7 @@
 		455038A020B099DB006CE5EB /* MeasurePoints */ = {
 			isa = PBXGroup;
 			children = (
+				4546D1E120E30B5C001C83CA /* Style */,
 				4575499520DF04A40096BCE3 /* Extensions */,
 				4538AB6320B09FF100961E34 /* DataAccess */,
 				4538AB5E20B09BF700961E34 /* Models */,
@@ -150,6 +169,9 @@
 				450D020820B0F1C80025C2A2 /* MeasurePointTableViewCell.swift */,
 				45198DB320D5957600D4D3C9 /* FavoritesViewController.swift */,
 				45872F1220DB401F005B0946 /* MeasurePointFavoriteEmptyCell.swift */,
+				451615BD20E1B89600E7DC36 /* DesignTableViewCell.swift */,
+				4546D1DF20E30A7F001C83CA /* CardTableViewCell.swift */,
+				4546D1E420E30F47001C83CA /* CardTableView.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -166,6 +188,7 @@
 		4575499520DF04A40096BCE3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4546D1E620E31E03001C83CA /* ColorExtension.swift */,
 				4575499320DF04960096BCE3 /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
@@ -295,20 +318,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				45B1820020D5D070008E7843 /* DetailViewController.swift in Sources */,
+				451615BE20E1B89600E7DC36 /* DesignTableViewCell.swift in Sources */,
 				4538AB6020B09C0A00961E34 /* MeasurePoint.swift in Sources */,
 				45198DB420D5957600D4D3C9 /* FavoritesViewController.swift in Sources */,
 				4563DF6820C722A1007BFEED /* MeasureReading.swift in Sources */,
+				4546D1E020E30A7F001C83CA /* CardTableViewCell.swift in Sources */,
 				450D020720B0EBBB0025C2A2 /* MeasurePointsDataTableViewController.swift in Sources */,
 				4535045720B9F678003BFF6F /* MeasurePointClass.swift in Sources */,
 				4538AB6220B09FE900961E34 /* QueryServices.swift in Sources */,
+				4546D1E320E30B73001C83CA /* ButtonStyle.swift in Sources */,
 				4575499420DF04960096BCE3 /* UIViewControllerExtensions.swift in Sources */,
 				45FB99BA20CC7866000EA007 /* DetailData.swift in Sources */,
 				455038A220B099DB006CE5EB /* AppDelegate.swift in Sources */,
+				4546D1E520E30F47001C83CA /* CardTableView.swift in Sources */,
 				45872F1320DB401F005B0946 /* MeasurePointFavoriteEmptyCell.swift in Sources */,
 				455867E020D6BAB100A5F7C6 /* FileAccess.swift in Sources */,
 				4538AB6720B0A88900961E34 /* AppData.swift in Sources */,
 				450D020520B0E4630025C2A2 /* MapViewController.swift in Sources */,
 				450D020920B0F1C80025C2A2 /* MeasurePointTableViewCell.swift in Sources */,
+				4546D1E720E31E03001C83CA /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
